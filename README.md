@@ -88,3 +88,11 @@ data on a fresh 90 day window
 i misconfigured the PAT because the action fails to access the repo to push
 https://github.com/jaylocks7/posthog-pet-proj/actions/runs/23777775818/job/69283317344#step:6:20
 
+FIXED in my own time (Tue Mar 31 12:24AM)
+
+----
+
+Things I'd want to add in the future
+
+A live feed of commit history for last 90 days in the UI using SSE
+
