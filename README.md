@@ -2,7 +2,7 @@ Start Time: 6:01 pm PT
 End Time: 7:35 pm PT
 
 Link:
-https://jaylocks7.github.io/weave-takehome/
+[Dashboard](https://jaylocks7.github.io/posthog-pet-proj/)
 
 Assignment Approach:
 
