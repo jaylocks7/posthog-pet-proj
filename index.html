@@ -1,0 +1,354 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>PostHog · Engineer Impact Dashboard</title>
+  <script src="https://cdn.jsdelivr.net/npm/chart.js@4/dist/chart.umd.min.js"></script>
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    :root {
+      --bg:       #0f1117;
+      --surface:  #1a1d2e;
+      --surface2: #222536;
+      --border:   #2d3154;
+      --orange:   #f54e00;
+      --orange2:  #ff7a3d;
+      --text:     #f0f0f5;
+      --muted:    #7c7f9e;
+      --red:      #ef4444;
+    }
+
+    body {
+      background: var(--bg);
+      color: var(--text);
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+      padding: 22px 28px 28px;
+      min-height: 100vh;
+    }
+
+    /* ── Header ── */
+    header {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      margin-bottom: 22px;
+    }
+
+    .header-left { display: flex; align-items: center; gap: 13px; }
+
+    .ph-logo {
+      width: 34px; height: 34px;
+      background: var(--orange);
+      border-radius: 8px;
+      display: flex; align-items: center; justify-content: center;
+      font-size: 17px; font-weight: 900; color: #fff; flex-shrink: 0;
+    }
+
+    .header-title h1  { font-size: 18px; font-weight: 700; }
+    .header-title p   { font-size: 12px; color: var(--muted); margin-top: 2px; }
+
+    .header-meta { text-align: right; }
+    .badge {
+      display: inline-block;
+      background: var(--surface); border: 1px solid var(--border);
+      padding: 3px 10px; border-radius: 20px;
+      font-size: 12px; color: var(--muted);
+    }
+    .updated { font-size: 11px; color: var(--muted); margin-top: 4px; }
+
+    /* ── Main grid ── */
+    .main-grid {
+      display: grid;
+      grid-template-columns: 210px 1fr;
+      gap: 16px;
+      margin-bottom: 16px;
+    }
+
+    /* ── Panel base ── */
+    .panel {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      padding: 15px 18px;
+    }
+
+    .panel-title {
+      font-size: 10px; font-weight: 600;
+      text-transform: uppercase; letter-spacing: 0.08em;
+      color: var(--muted); margin-bottom: 12px;
+    }
+
+    /* ── Methodology ── */
+    .methodology p {
+      font-size: 12px; color: var(--muted);
+      line-height: 1.6; margin-bottom: 12px;
+    }
+
+    .weight-table { width: 100%; border-collapse: collapse; font-size: 12px; }
+    .weight-table th {
+      text-align: left; color: var(--muted); font-weight: 500;
+      padding: 3px 0; border-bottom: 1px solid var(--border); font-size: 11px;
+    }
+    .weight-table th:last-child { text-align: right; }
+    .weight-table td { padding: 4px 0; }
+    .weight-table td:last-child { text-align: right; font-weight: 600; color: var(--orange2); }
+
+    .type-pip {
+      display: inline-block; width: 7px; height: 7px;
+      border-radius: 50%; margin-right: 6px; vertical-align: middle;
+    }
+
+    .formula-box {
+      margin-top: 12px;
+      background: var(--surface2); border-radius: 8px;
+      padding: 10px 12px; font-size: 11px; color: var(--muted); line-height: 1.8;
+    }
+    .formula-box code { color: var(--orange2); font-family: 'SF Mono', 'Fira Code', monospace; }
+
+    /* ── Summary chart ── */
+    .chart-wrap { position: relative; height: 185px; }
+
+    /* ── Cards ── */
+    .cards-row { display: flex; gap: 13px; }
+
+    .card {
+      flex: 1; min-width: 0;
+      background: var(--surface); border: 1px solid var(--border);
+      border-radius: 12px; padding: 14px 12px;
+      display: flex; flex-direction: column; align-items: center;
+      position: relative; transition: border-color .2s;
+    }
+    .card:hover { border-color: var(--orange); }
+    .card.top { border-color: var(--orange); background: linear-gradient(160deg,#1f1614 0%,var(--surface) 55%); }
+
+    .rank-badge {
+      position: absolute; top: 9px; left: 9px;
+      width: 20px; height: 20px; border-radius: 50%;
+      background: var(--surface2); border: 1px solid var(--border);
+      display: flex; align-items: center; justify-content: center;
+      font-size: 9px; font-weight: 700; color: var(--muted);
+    }
+    .rank-badge.top { background: var(--orange); border-color: var(--orange); color: #fff; }
+
+    .avatar {
+      width: 52px; height: 52px; border-radius: 50%;
+      border: 2px solid var(--border); margin-bottom: 9px;
+    }
+    .card.top .avatar { border-color: var(--orange); }
+
+    .eng-name {
+      font-size: 12px; font-weight: 600; text-align: center;
+      max-width: 100%; overflow: hidden; text-overflow: ellipsis; white-space: nowrap;
+      margin-bottom: 5px;
+    }
+    .eng-name a { color: inherit; text-decoration: none; }
+    .eng-name a:hover { color: var(--orange); }
+
+    .score-num  { font-size: 30px; font-weight: 800; color: var(--orange); line-height: 1; }
+    .score-lbl  { font-size: 10px; color: var(--muted); margin-bottom: 11px; }
+
+    .divider { width: 100%; height: 1px; background: var(--border); margin-bottom: 10px; }
+
+    .stat { width: 100%; display: flex; justify-content: space-between; font-size: 11px; color: var(--muted); margin-bottom: 6px; }
+    .stat span:last-child { color: var(--text); font-weight: 600; }
+
+    .breakdown-lbl {
+      width: 100%; font-size: 9px; color: var(--muted);
+      text-transform: uppercase; letter-spacing: .06em; margin-bottom: 5px;
+    }
+
+    .breakdown-bar {
+      width: 100%; height: 7px; border-radius: 4px;
+      overflow: hidden; display: flex; margin-bottom: 8px;
+    }
+    .bb-seg { height: 100%; }
+
+    .type-list { width: 100%; display: flex; flex-direction: column; gap: 3px; }
+    .type-row  { display: flex; align-items: center; justify-content: space-between; font-size: 10px; }
+    .type-row .lbl { display: flex; align-items: center; gap: 5px; color: var(--muted); }
+    .type-row .cnt { color: var(--text); font-weight: 600; }
+    .dot { width: 6px; height: 6px; border-radius: 50%; flex-shrink: 0; }
+
+    /* ── States ── */
+    .loading, .error {
+      text-align: center; padding: 80px;
+      color: var(--muted); font-size: 14px; line-height: 2;
+    }
+    .error { color: var(--red); }
+    .error code { background: var(--surface); padding: 2px 6px; border-radius: 4px; font-size: 12px; }
+  </style>
+</head>
+<body>
+<div id="app"><div class="loading">Loading…</div></div>
+
+<script>
+const TYPE_COLORS = {
+  feat:     '#f54e00',
+  fix:      '#f59e0b',
+  perf:     '#f97316',
+  test:     '#22c55e',
+  refactor: '#a855f7',
+  docs:     '#3b82f6',
+  chore:    '#64748b',
+  revert:   '#ef4444',
+  ci:       '#475569',
+  build:    '#475569',
+  style:    '#94a3b8',
+  other:    '#374151',
+};
+
+const WEIGHTS = {
+  feat: 3.0, fix: 2.5, perf: 2.0, test: 1.5,
+  refactor: 1.0, chore: 0.5, docs: 0.5, revert: 0.5,
+  ci: 0.3, build: 0.3, style: 0.3,
+};
+
+function fmt(iso) {
+  return new Date(iso).toLocaleDateString('en-US', {
+    month: 'short', day: 'numeric', year: 'numeric',
+    hour: '2-digit', minute: '2-digit',
+  });
+}
+
+function methodology() {
+  const rows = Object.entries(WEIGHTS)
+    .sort((a, b) => b[1] - a[1])
+    .map(([t, w]) => `
+      <tr>
+        <td><span class="type-pip" style="background:${TYPE_COLORS[t]||'#64748b'}"></span>${t}</td>
+        <td>${w.toFixed(1)}</td>
+      </tr>`).join('');
+
+  return `
+    <div class="panel methodology">
+      <div class="panel-title">How scores work</div>
+      <p>Each commit is weighted by its conventional type. Engineers who consistently ship features and squash bugs rank above those focused on maintenance.</p>
+      <table class="weight-table">
+        <thead><tr><th>Type</th><th>Weight</th></tr></thead>
+        <tbody>${rows}</tbody>
+      </table>
+      <div class="formula-box">
+        <code>raw = Σ weight(type)</code><br>
+        <code>score = (raw − min) / (max − min) × 100</code><br><br>
+        Score is relative — <strong style="color:#f0f0f5">100</strong> = top engineer in the window.
+      </div>
+    </div>`;
+}
+
+function summaryPanel(engineers) {
+  return `
+    <div class="panel">
+      <div class="panel-title">Impact score · last 90 days</div>
+      <div class="chart-wrap"><canvas id="summary-chart"></canvas></div>
+    </div>`;
+}
+
+function mountChart(engineers) {
+  const ctx = document.getElementById('summary-chart').getContext('2d');
+  new Chart(ctx, {
+    type: 'bar',
+    data: {
+      labels: engineers.map(e => e.login),
+      datasets: [{
+        data: engineers.map(e => e.impact_score),
+        backgroundColor: engineers.map((_, i) =>
+          i === 0 ? '#f54e00' : `rgba(245,78,0,${Math.max(0.25, 0.65 - i * 0.1)})`),
+        borderRadius: 5,
+        borderSkipped: false,
+      }]
+    },
+    options: {
+      responsive: true, maintainAspectRatio: false,
+      plugins: {
+        legend: { display: false },
+        tooltip: {
+          callbacks: { label: c => ` Impact score: ${c.raw.toFixed(1)} / 100` }
+        }
+      },
+      scales: {
+        x: { grid: { color: '#2d3154' }, ticks: { color: '#7c7f9e', font: { size: 11 } } },
+        y: { min: 0, max: 100, grid: { color: '#2d3154' }, ticks: { color: '#7c7f9e', font: { size: 11 }, stepSize: 25 } }
+      }
+    }
+  });
+}
+
+function card(eng) {
+  const isTop = eng.rank === 1;
+  const byType = eng.commits_by_type || {};
+  const sorted = Object.entries(byType).sort((a, b) => b[1] - a[1]).slice(0, 5);
+  const total  = eng.total_commits || 1;
+
+  const segments = sorted.map(([t, n]) =>
+    `<div class="bb-seg" style="flex:${n};background:${TYPE_COLORS[t]||'#64748b'}"></div>`
+  ).join('');
+
+  const rows = sorted.map(([t, n]) => `
+    <div class="type-row">
+      <span class="lbl"><span class="dot" style="background:${TYPE_COLORS[t]||'#64748b'}"></span>${t}</span>
+      <span class="cnt">${n}</span>
+    </div>`).join('');
+
+  return `
+    <div class="card ${isTop ? 'top' : ''}">
+      <div class="rank-badge ${isTop ? 'top' : ''}">#${eng.rank}</div>
+      <img class="avatar" src="${eng.avatar_url}" alt="${eng.login}" loading="lazy">
+      <div class="eng-name">
+        <a href="https://github.com/${eng.login}" target="_blank" rel="noopener">${eng.login}</a>
+      </div>
+      <div class="score-num">${Math.round(eng.impact_score)}</div>
+      <div class="score-lbl">impact score</div>
+      <div class="divider"></div>
+      <div class="stat"><span>Commits</span><span>${eng.total_commits}</span></div>
+      <div class="stat"><span>Raw score</span><span>${eng.raw_score.toFixed(1)}</span></div>
+      <div class="breakdown-lbl">by commit type</div>
+      <div class="breakdown-bar">${segments}</div>
+      <div class="type-list">${rows}</div>
+    </div>`;
+}
+
+function render(data) {
+  document.getElementById('app').innerHTML = `
+    <header>
+      <div class="header-left">
+        <div class="ph-logo">P</div>
+        <div class="header-title">
+          <h1>Engineer Impact Dashboard</h1>
+          <p>PostHog · top 5 contributors by weighted commit impact</p>
+        </div>
+      </div>
+      <div class="header-meta">
+        <div class="badge">Last ${data.window_days} days</div>
+        <div class="updated">Updated ${fmt(data.generated_at)}</div>
+      </div>
+    </header>
+
+    <div class="main-grid">
+      ${methodology()}
+      ${summaryPanel(data.engineers)}
+    </div>
+
+    <div class="cards-row">
+      ${data.engineers.map(card).join('')}
+    </div>`;
+
+  mountChart(data.engineers);
+}
+
+fetch('data.json')
+  .then(r => { if (!r.ok) throw new Error(`HTTP ${r.status}`); return r.json(); })
+  .then(render)
+  .catch(err => {
+    document.getElementById('app').innerHTML = `
+      <div class="error">
+        Could not load <code>data.json</code><br>
+        Run <code>python fetch-posthog-data.py</code> first, then serve with<br>
+        <code>python -m http.server 8000</code><br><br>
+        <small>${err.message}</small>
+      </div>`;
+  });
+</script>
+</body>
+</html>
