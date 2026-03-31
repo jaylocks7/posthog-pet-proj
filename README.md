@@ -78,3 +78,13 @@ ci	0.3
 build	0.3
 style	0.3
 
+----
+
+One issue:
+
+tried to setup a github action to re-run script that gathers data at the beginning of a new day (PT) so that each day shows
+data on a fresh 90 day window
+
+i misconfigured the PAT because the action fails to access the repo to push
+https://github.com/jaylocks7/posthog-pet-proj/actions/runs/23777775818/job/69283317344#step:6:20
+
