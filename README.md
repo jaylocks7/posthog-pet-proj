@@ -11,7 +11,8 @@ So to determine the Top 5 Most Impactful Engineers at PostHog, we have to extrac
 
 And to narrow down what I believe impactful to be I consider:
 -what kinds of code changes an engineer is making (not just quantity)? all documentation? or fixes week after week?
--
+
+Unfortunately I had to scope down to just this metric for time's sake.
 
 -----
 1. 
@@ -41,9 +42,35 @@ Thus, from commit history, on a user basis, from the last 90 days, I want to tra
 
 ----
 
-2. Looking at PRs, the same scoping will apply as for commit history. For the sake of brevity I'm going to focus on number of comments by PR type (same as commit type).
+I have a script that I run to collect the last 90 days worth of commit data and puts it into a JSON that the FE reads and displays from.
+
+This is done because of the scope of the problem. 
+
+Consider this an abstraction of a nightly batch job that collects data to then display on a 
+daily basis.
+
+With more time one can consider a more real-time approach to this dashboard.
 
 ----
 
-3. Looking at issues, 
+Formula for impact score:
+
+raw = Σ weight(type)
+score = (raw − min) / (max − min) × 100
+
+Commit Types and Weights:
+
+
+Type	Weight
+feat	3.0
+fix	2.5
+perf	2.0
+test	1.5
+refactor	1.0
+chore	0.5
+docs	0.5
+revert	0.5
+ci	0.3
+build	0.3
+style	0.3
 
