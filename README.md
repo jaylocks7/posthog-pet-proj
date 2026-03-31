@@ -1,4 +1,8 @@
 Start Time: 6:01 pm PT
+End Time: 7:35 pm PT
+
+Link:
+https://jaylocks7.github.io/weave-takehome/
 
 Assignment Approach:
 
