@@ -1,17 +1,17 @@
 {
-  "generated_at": "2026-04-01T09:19:19Z",
+  "generated_at": "2026-04-02T09:11:16Z",
   "window_days": 90,
   "engineers": [
     {
       "login": "andrewm4894",
       "avatar_url": "https://avatars.githubusercontent.com/u/2178292?v=4",
       "impact_score": 100.0,
-      "raw_score": 572.0,
-      "total_commits": 240,
+      "raw_score": 583.5,
+      "total_commits": 244,
       "commits_by_type": {
-        "fix": 79,
+        "feat": 120,
+        "fix": 80,
         "chore": 42,
-        "feat": 117,
         "perf": 1,
         "docs": 1
       },
@@ -20,14 +20,14 @@
     {
       "login": "pauldambra",
       "avatar_url": "https://avatars.githubusercontent.com/u/984817?v=4",
-      "impact_score": 85.2,
-      "raw_score": 487.25,
-      "total_commits": 216,
+      "impact_score": 84.7,
+      "raw_score": 494.25,
+      "total_commits": 218,
       "commits_by_type": {
-        "fix": 154,
+        "fix": 157,
         "other": 1,
         "feat": 28,
-        "chore": 30,
+        "chore": 29,
         "perf": 1,
         "revert": 2
       },
@@ -36,12 +36,12 @@
     {
       "login": "rafaeelaudibert",
       "avatar_url": "https://avatars.githubusercontent.com/u/32079912?v=4",
-      "impact_score": 57.8,
-      "raw_score": 330.5,
-      "total_commits": 143,
+      "impact_score": 57.1,
+      "raw_score": 333.5,
+      "total_commits": 144,
       "commits_by_type": {
+        "feat": 70,
         "fix": 36,
-        "feat": 69,
         "refactor": 23,
         "chore": 12,
         "perf": 2,
@@ -52,12 +52,12 @@
     {
       "login": "jonmcwest",
       "avatar_url": "https://avatars.githubusercontent.com/u/66999846?v=4",
-      "impact_score": 53.6,
-      "raw_score": 306.5,
-      "total_commits": 116,
+      "impact_score": 52.7,
+      "raw_score": 307.5,
+      "total_commits": 117,
       "commits_by_type": {
+        "refactor": 12,
         "feat": 80,
-        "refactor": 11,
         "fix": 21,
         "chore": 3,
         "test": 1
@@ -67,11 +67,11 @@
     {
       "login": "robbie-c",
       "avatar_url": "https://avatars.githubusercontent.com/u/2056078?v=4",
-      "impact_score": 50.0,
-      "raw_score": 286.25,
-      "total_commits": 109,
+      "impact_score": 49.5,
+      "raw_score": 288.75,
+      "total_commits": 110,
       "commits_by_type": {
-        "fix": 31,
+        "fix": 32,
         "chore": 9,
         "feat": 68,
         "other": 1
