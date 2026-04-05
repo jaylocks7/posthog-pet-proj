@@ -1,15 +1,15 @@
 {
-  "generated_at": "2026-04-04T08:53:45Z",
+  "generated_at": "2026-04-05T08:55:43Z",
   "window_days": 90,
   "engineers": [
     {
       "login": "andrewm4894",
       "avatar_url": "https://avatars.githubusercontent.com/u/2178292?v=4",
       "impact_score": 100.0,
-      "raw_score": 606.0,
-      "total_commits": 252,
+      "raw_score": 612.0,
+      "total_commits": 254,
       "commits_by_type": {
-        "feat": 125,
+        "feat": 127,
         "fix": 83,
         "chore": 42,
         "perf": 1,
@@ -20,13 +20,13 @@
     {
       "login": "pauldambra",
       "avatar_url": "https://avatars.githubusercontent.com/u/984817?v=4",
-      "impact_score": 83.2,
-      "raw_score": 504.25,
-      "total_commits": 221,
+      "impact_score": 83.8,
+      "raw_score": 512.75,
+      "total_commits": 227,
       "commits_by_type": {
-        "feat": 33,
-        "chore": 29,
-        "fix": 155,
+        "feat": 36,
+        "fix": 154,
+        "chore": 33,
         "other": 1,
         "perf": 1,
         "revert": 2
@@ -36,7 +36,7 @@
     {
       "login": "rafaeelaudibert",
       "avatar_url": "https://avatars.githubusercontent.com/u/32079912?v=4",
-      "impact_score": 56.9,
+      "impact_score": 56.4,
       "raw_score": 345.0,
       "total_commits": 148,
       "commits_by_type": {
@@ -52,13 +52,13 @@
     {
       "login": "jonmcwest",
       "avatar_url": "https://avatars.githubusercontent.com/u/66999846?v=4",
-      "impact_score": 52.1,
-      "raw_score": 316.0,
-      "total_commits": 120,
+      "impact_score": 50.1,
+      "raw_score": 306.5,
+      "total_commits": 116,
       "commits_by_type": {
-        "feat": 82,
-        "fix": 22,
-        "refactor": 12,
+        "feat": 80,
+        "fix": 21,
+        "refactor": 11,
         "chore": 3,
         "test": 1
       },
@@ -67,7 +67,7 @@
     {
       "login": "eli-r-ph",
       "avatar_url": "https://avatars.githubusercontent.com/u/197809444?v=4",
-      "impact_score": 47.8,
+      "impact_score": 47.3,
       "raw_score": 289.75,
       "total_commits": 107,
       "commits_by_type": {
