@@ -1,17 +1,17 @@
 {
-  "generated_at": "2026-04-09T09:20:06Z",
+  "generated_at": "2026-04-10T09:19:47Z",
   "window_days": 90,
   "engineers": [
     {
       "login": "andrewm4894",
       "avatar_url": "https://avatars.githubusercontent.com/u/2178292?v=4",
       "impact_score": 100.0,
-      "raw_score": 609.5,
-      "total_commits": 253,
+      "raw_score": 609.0,
+      "total_commits": 252,
       "commits_by_type": {
-        "feat": 127,
         "fix": 82,
-        "chore": 42,
+        "feat": 127,
+        "chore": 41,
         "perf": 1,
         "docs": 1
       },
@@ -20,13 +20,13 @@
     {
       "login": "pauldambra",
       "avatar_url": "https://avatars.githubusercontent.com/u/984817?v=4",
-      "impact_score": 84.3,
-      "raw_score": 513.75,
-      "total_commits": 228,
+      "impact_score": 86.4,
+      "raw_score": 526.25,
+      "total_commits": 233,
       "commits_by_type": {
-        "chore": 34,
         "fix": 153,
-        "feat": 37,
+        "chore": 35,
+        "feat": 41,
         "other": 1,
         "perf": 1,
         "revert": 2
@@ -52,28 +52,27 @@
     {
       "login": "dmarticus",
       "avatar_url": "https://avatars.githubusercontent.com/u/4853149?v=4",
-      "impact_score": 47.7,
-      "raw_score": 291.0,
-      "total_commits": 122,
+      "impact_score": 49.8,
+      "raw_score": 303.5,
+      "total_commits": 127,
       "commits_by_type": {
-        "fix": 55,
+        "fix": 60,
         "chore": 19,
         "feat": 48
       },
       "rank": 4
     },
     {
-      "login": "jonmcwest",
-      "avatar_url": "https://avatars.githubusercontent.com/u/66999846?v=4",
-      "impact_score": 47.1,
-      "raw_score": 287.0,
-      "total_commits": 108,
+      "login": "eli-r-ph",
+      "avatar_url": "https://avatars.githubusercontent.com/u/197809444?v=4",
+      "impact_score": 47.5,
+      "raw_score": 289.25,
+      "total_commits": 106,
       "commits_by_type": {
-        "feat": 74,
-        "fix": 21,
-        "refactor": 10,
-        "chore": 2,
-        "test": 1
+        "feat": 77,
+        "fix": 22,
+        "chore": 6,
+        "other": 1
       },
       "rank": 5
     }
