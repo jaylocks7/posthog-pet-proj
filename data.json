@@ -1,16 +1,16 @@
 {
-  "generated_at": "2026-04-14T09:43:39Z",
+  "generated_at": "2026-04-15T09:44:02Z",
   "window_days": 90,
   "engineers": [
     {
       "login": "andrewm4894",
       "avatar_url": "https://avatars.githubusercontent.com/u/2178292?v=4",
       "impact_score": 100.0,
-      "raw_score": 611.5,
+      "raw_score": 611.0,
       "total_commits": 254,
       "commits_by_type": {
-        "fix": 84,
-        "feat": 126,
+        "feat": 125,
+        "fix": 85,
         "chore": 42,
         "perf": 1,
         "docs": 1
@@ -20,11 +20,11 @@
     {
       "login": "pauldambra",
       "avatar_url": "https://avatars.githubusercontent.com/u/984817?v=4",
-      "impact_score": 88.4,
-      "raw_score": 540.75,
-      "total_commits": 240,
+      "impact_score": 87.7,
+      "raw_score": 535.75,
+      "total_commits": 238,
       "commits_by_type": {
-        "fix": 156,
+        "fix": 154,
         "chore": 37,
         "feat": 43,
         "other": 1,
@@ -36,14 +36,14 @@
     {
       "login": "rafaeelaudibert",
       "avatar_url": "https://avatars.githubusercontent.com/u/32079912?v=4",
-      "impact_score": 54.8,
-      "raw_score": 335.0,
-      "total_commits": 143,
+      "impact_score": 53.7,
+      "raw_score": 328.5,
+      "total_commits": 140,
       "commits_by_type": {
-        "fix": 39,
         "refactor": 20,
-        "feat": 69,
-        "chore": 12,
+        "fix": 39,
+        "feat": 67,
+        "chore": 11,
         "perf": 2,
         "docs": 1
       },
@@ -52,12 +52,12 @@
     {
       "login": "sampennington",
       "avatar_url": "https://avatars.githubusercontent.com/u/56024559?v=4",
-      "impact_score": 50.1,
-      "raw_score": 306.5,
-      "total_commits": 159,
+      "impact_score": 51.0,
+      "raw_score": 312.0,
+      "total_commits": 161,
       "commits_by_type": {
-        "feat": 29,
-        "fix": 74,
+        "feat": 30,
+        "fix": 75,
         "chore": 43,
         "test": 1,
         "revert": 1,
@@ -68,13 +68,13 @@
     {
       "login": "dmarticus",
       "avatar_url": "https://avatars.githubusercontent.com/u/4853149?v=4",
-      "impact_score": 49.0,
-      "raw_score": 299.5,
-      "total_commits": 124,
+      "impact_score": 50.0,
+      "raw_score": 305.5,
+      "total_commits": 127,
       "commits_by_type": {
-        "feat": 47,
-        "fix": 60,
-        "chore": 17
+        "fix": 61,
+        "feat": 48,
+        "chore": 18
       },
       "rank": 5
     }
