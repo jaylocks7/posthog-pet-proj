@@ -1,15 +1,15 @@
 {
-  "generated_at": "2026-04-18T09:01:15Z",
+  "generated_at": "2026-04-19T09:02:52Z",
   "window_days": 90,
   "engineers": [
     {
       "login": "andrewm4894",
       "avatar_url": "https://avatars.githubusercontent.com/u/2178292?v=4",
       "impact_score": 100.0,
-      "raw_score": 628.0,
-      "total_commits": 260,
+      "raw_score": 637.0,
+      "total_commits": 263,
       "commits_by_type": {
-        "feat": 129,
+        "feat": 132,
         "fix": 87,
         "chore": 42,
         "perf": 1,
@@ -20,13 +20,13 @@
     {
       "login": "pauldambra",
       "avatar_url": "https://avatars.githubusercontent.com/u/984817?v=4",
-      "impact_score": 89.3,
-      "raw_score": 560.75,
-      "total_commits": 249,
+      "impact_score": 89.0,
+      "raw_score": 567.25,
+      "total_commits": 252,
       "commits_by_type": {
+        "feat": 48,
+        "chore": 40,
         "fix": 160,
-        "feat": 46,
-        "chore": 39,
         "other": 1,
         "perf": 1,
         "revert": 2
@@ -36,14 +36,14 @@
     {
       "login": "rafaeelaudibert",
       "avatar_url": "https://avatars.githubusercontent.com/u/32079912?v=4",
-      "impact_score": 54.2,
-      "raw_score": 340.5,
-      "total_commits": 145,
+      "impact_score": 53.9,
+      "raw_score": 343.5,
+      "total_commits": 146,
       "commits_by_type": {
+        "feat": 70,
         "refactor": 21,
         "fix": 41,
         "chore": 11,
-        "feat": 69,
         "perf": 2,
         "docs": 1
       },
@@ -52,7 +52,7 @@
     {
       "login": "sampennington",
       "avatar_url": "https://avatars.githubusercontent.com/u/56024559?v=4",
-      "impact_score": 50.9,
+      "impact_score": 50.1,
       "raw_score": 319.5,
       "total_commits": 164,
       "commits_by_type": {
@@ -68,7 +68,7 @@
     {
       "login": "dmarticus",
       "avatar_url": "https://avatars.githubusercontent.com/u/4853149?v=4",
-      "impact_score": 49.6,
+      "impact_score": 48.9,
       "raw_score": 311.5,
       "total_commits": 129,
       "commits_by_type": {
