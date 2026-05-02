@@ -1,16 +1,16 @@
 {
-  "generated_at": "2026-05-01T09:54:56Z",
+  "generated_at": "2026-05-02T09:15:29Z",
   "window_days": 90,
   "engineers": [
     {
       "login": "andrewm4894",
       "avatar_url": "https://avatars.githubusercontent.com/u/2178292?v=4",
       "impact_score": 100.0,
-      "raw_score": 671.0,
-      "total_commits": 272,
+      "raw_score": 670.5,
+      "total_commits": 271,
       "commits_by_type": {
         "feat": 147,
-        "chore": 40,
+        "chore": 39,
         "fix": 83,
         "docs": 1,
         "perf": 1
@@ -20,13 +20,13 @@
     {
       "login": "pauldambra",
       "avatar_url": "https://avatars.githubusercontent.com/u/984817?v=4",
-      "impact_score": 97.4,
-      "raw_score": 653.55,
-      "total_commits": 292,
+      "impact_score": 98.9,
+      "raw_score": 663.05,
+      "total_commits": 298,
       "commits_by_type": {
-        "chore": 47,
-        "fix": 161,
-        "perf": 5,
+        "perf": 8,
+        "chore": 49,
+        "fix": 162,
         "feat": 71,
         "revert": 4,
         "refactor": 2,
@@ -38,12 +38,12 @@
     {
       "login": "sampennington",
       "avatar_url": "https://avatars.githubusercontent.com/u/56024559?v=4",
-      "impact_score": 59.2,
-      "raw_score": 397.5,
-      "total_commits": 204,
+      "impact_score": 60.5,
+      "raw_score": 406.0,
+      "total_commits": 211,
       "commits_by_type": {
-        "feat": 45,
-        "chore": 53,
+        "chore": 58,
+        "feat": 47,
         "refactor": 14,
         "fix": 83,
         "test": 4,
@@ -69,17 +69,20 @@
       "rank": 4
     },
     {
-      "login": "rafaeelaudibert",
-      "avatar_url": "https://avatars.githubusercontent.com/u/32079912?v=4",
-      "impact_score": 48.6,
-      "raw_score": 326.0,
-      "total_commits": 133,
+      "login": "webjunkie",
+      "avatar_url": "https://avatars.githubusercontent.com/u/59713?v=4",
+      "impact_score": 48.9,
+      "raw_score": 327.75,
+      "total_commits": 195,
       "commits_by_type": {
-        "feat": 69,
-        "fix": 38,
-        "refactor": 16,
-        "chore": 8,
-        "perf": 2
+        "fix": 74,
+        "chore": 78,
+        "refactor": 2,
+        "feat": 32,
+        "other": 1,
+        "revert": 6,
+        "perf": 1,
+        "docs": 1
       },
       "rank": 5
     }
