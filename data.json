@@ -1,18 +1,18 @@
 {
-  "generated_at": "2026-05-03T09:27:12Z",
+  "generated_at": "2026-05-04T10:21:39Z",
   "window_days": 90,
   "engineers": [
     {
       "login": "pauldambra",
       "avatar_url": "https://avatars.githubusercontent.com/u/984817?v=4",
       "impact_score": 100.0,
-      "raw_score": 673.55,
-      "total_commits": 306,
+      "raw_score": 681.55,
+      "total_commits": 313,
       "commits_by_type": {
-        "chore": 53,
-        "perf": 12,
-        "feat": 72,
-        "fix": 161,
+        "fix": 159,
+        "perf": 16,
+        "chore": 57,
+        "feat": 73,
         "revert": 4,
         "refactor": 2,
         "ci": 1,
@@ -23,13 +23,13 @@
     {
       "login": "andrewm4894",
       "avatar_url": "https://avatars.githubusercontent.com/u/2178292?v=4",
-      "impact_score": 98.7,
-      "raw_score": 664.5,
-      "total_commits": 269,
+      "impact_score": 97.1,
+      "raw_score": 661.5,
+      "total_commits": 267,
       "commits_by_type": {
         "feat": 145,
-        "chore": 39,
-        "fix": 83,
+        "chore": 38,
+        "fix": 82,
         "docs": 1,
         "perf": 1
       },
@@ -38,14 +38,14 @@
     {
       "login": "sampennington",
       "avatar_url": "https://avatars.githubusercontent.com/u/56024559?v=4",
-      "impact_score": 61.2,
-      "raw_score": 412.5,
-      "total_commits": 214,
+      "impact_score": 61.5,
+      "raw_score": 419.5,
+      "total_commits": 216,
       "commits_by_type": {
-        "feat": 49,
+        "feat": 53,
         "chore": 59,
+        "fix": 81,
         "refactor": 14,
-        "fix": 83,
         "test": 4,
         "perf": 4,
         "revert": 1
@@ -53,33 +53,35 @@
       "rank": 3
     },
     {
-      "login": "MattPua",
-      "avatar_url": "https://avatars.githubusercontent.com/u/3376526?v=4",
-      "impact_score": 49.4,
-      "raw_score": 333.0,
-      "total_commits": 136,
+      "login": "jonmcwest",
+      "avatar_url": "https://avatars.githubusercontent.com/u/66999846?v=4",
+      "impact_score": 51.3,
+      "raw_score": 350.0,
+      "total_commits": 128,
       "commits_by_type": {
-        "fix": 49,
-        "feat": 64,
-        "chore": 14,
-        "refactor": 6,
-        "perf": 2,
-        "test": 1
+        "fix": 28,
+        "feat": 90,
+        "perf": 1,
+        "refactor": 7,
+        "chore": 2
       },
       "rank": 4
     },
     {
-      "login": "jonmcwest",
-      "avatar_url": "https://avatars.githubusercontent.com/u/66999846?v=4",
-      "impact_score": 49.0,
-      "raw_score": 330.0,
-      "total_commits": 121,
+      "login": "webjunkie",
+      "avatar_url": "https://avatars.githubusercontent.com/u/59713?v=4",
+      "impact_score": 49.5,
+      "raw_score": 337.75,
+      "total_commits": 198,
       "commits_by_type": {
-        "feat": 85,
-        "fix": 26,
+        "fix": 77,
+        "feat": 33,
+        "chore": 77,
+        "refactor": 2,
+        "other": 1,
+        "revert": 6,
         "perf": 1,
-        "refactor": 7,
-        "chore": 2
+        "docs": 1
       },
       "rank": 5
     }
