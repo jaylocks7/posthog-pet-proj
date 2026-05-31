@@ -1,19 +1,19 @@
 {
-  "generated_at": "2026-05-30T10:08:24Z",
+  "generated_at": "2026-05-31T10:22:26Z",
   "window_days": 90,
   "engineers": [
     {
       "login": "pauldambra",
       "avatar_url": "https://avatars.githubusercontent.com/u/984817?v=4",
       "impact_score": 100.0,
-      "raw_score": 804.55,
-      "total_commits": 371,
+      "raw_score": 806.05,
+      "total_commits": 372,
       "commits_by_type": {
-        "feat": 121,
-        "chore": 68,
+        "feat": 123,
+        "fix": 135,
+        "chore": 69,
         "revert": 6,
         "refactor": 12,
-        "fix": 137,
         "perf": 24,
         "test": 1,
         "ci": 1,
@@ -24,11 +24,11 @@
     {
       "login": "sampennington",
       "avatar_url": "https://avatars.githubusercontent.com/u/56024559?v=4",
-      "impact_score": 65.7,
-      "raw_score": 528.5,
-      "total_commits": 264,
+      "impact_score": 65.2,
+      "raw_score": 526.0,
+      "total_commits": 263,
       "commits_by_type": {
-        "fix": 88,
+        "fix": 87,
         "chore": 65,
         "feat": 80,
         "refactor": 19,
@@ -42,13 +42,13 @@
     {
       "login": "andrewm4894",
       "avatar_url": "https://avatars.githubusercontent.com/u/2178292?v=4",
-      "impact_score": 58.8,
-      "raw_score": 473.5,
-      "total_commits": 185,
+      "impact_score": 60.2,
+      "raw_score": 485.5,
+      "total_commits": 189,
       "commits_by_type": {
+        "feat": 114,
         "chore": 21,
         "fix": 53,
-        "feat": 110,
         "docs": 1
       },
       "rank": 3
@@ -56,7 +56,7 @@
     {
       "login": "webjunkie",
       "avatar_url": "https://avatars.githubusercontent.com/u/59713?v=4",
-      "impact_score": 48.3,
+      "impact_score": 48.2,
       "raw_score": 388.75,
       "total_commits": 231,
       "commits_by_type": {
@@ -74,7 +74,7 @@
     {
       "login": "MattPua",
       "avatar_url": "https://avatars.githubusercontent.com/u/3376526?v=4",
-      "impact_score": 47.2,
+      "impact_score": 47.1,
       "raw_score": 380.0,
       "total_commits": 155,
       "commits_by_type": {
