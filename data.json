@@ -1,18 +1,18 @@
 {
-  "generated_at": "2026-06-06T10:14:18Z",
+  "generated_at": "2026-06-07T10:34:29Z",
   "window_days": 90,
   "engineers": [
     {
       "login": "pauldambra",
       "avatar_url": "https://avatars.githubusercontent.com/u/984817?v=4",
       "impact_score": 100.0,
-      "raw_score": 831.55,
-      "total_commits": 385,
+      "raw_score": 855.05,
+      "total_commits": 401,
       "commits_by_type": {
-        "fix": 128,
-        "chore": 75,
-        "feat": 136,
-        "refactor": 13,
+        "refactor": 22,
+        "feat": 138,
+        "fix": 131,
+        "chore": 77,
         "revert": 6,
         "perf": 24,
         "test": 1,
@@ -24,12 +24,12 @@
     {
       "login": "sampennington",
       "avatar_url": "https://avatars.githubusercontent.com/u/56024559?v=4",
-      "impact_score": 67.9,
-      "raw_score": 564.5,
-      "total_commits": 275,
+      "impact_score": 66.3,
+      "raw_score": 567.0,
+      "total_commits": 276,
       "commits_by_type": {
+        "fix": 90,
         "chore": 64,
-        "fix": 89,
         "feat": 91,
         "refactor": 18,
         "perf": 5,
@@ -42,7 +42,7 @@
     {
       "login": "Gilbert09",
       "avatar_url": "https://avatars.githubusercontent.com/u/1459269?v=4",
-      "impact_score": 62.4,
+      "impact_score": 60.7,
       "raw_score": 519.0,
       "total_commits": 215,
       "commits_by_type": {
@@ -56,12 +56,12 @@
     {
       "login": "andrewm4894",
       "avatar_url": "https://avatars.githubusercontent.com/u/2178292?v=4",
-      "impact_score": 56.3,
-      "raw_score": 468.5,
-      "total_commits": 185,
+      "impact_score": 54.4,
+      "raw_score": 465.5,
+      "total_commits": 184,
       "commits_by_type": {
+        "feat": 111,
         "fix": 48,
-        "feat": 112,
         "chore": 23,
         "revert": 1,
         "docs": 1
@@ -71,14 +71,14 @@
     {
       "login": "webjunkie",
       "avatar_url": "https://avatars.githubusercontent.com/u/59713?v=4",
-      "impact_score": 49.1,
-      "raw_score": 408.05,
-      "total_commits": 242,
+      "impact_score": 47.3,
+      "raw_score": 404.55,
+      "total_commits": 240,
       "commits_by_type": {
         "ci": 1,
         "fix": 86,
-        "feat": 44,
-        "chore": 97,
+        "feat": 43,
+        "chore": 96,
         "refactor": 5,
         "perf": 2,
         "revert": 5,
