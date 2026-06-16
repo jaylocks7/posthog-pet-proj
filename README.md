@@ -1,7 +1,37 @@
 # PostHog Engineer Impact Dashboard
 
 **Live:** [Dashboard](https://jaylocks7.github.io/posthog-pet-proj/)
+# PostHog Engineer Impact Dashboard
 
+**Live:** [Dashboard](https://jaylocks7.github.io/posthog-pet-proj/)
+
+A static dashboard that ranks the top 5 most impactful engineers at PostHog based on commit activity over the last 90 days.
+
+---
+
+## How Impact Is Measured
+
+The only publicly available signals from a GitHub repo are commits, pull requests, and issues. Of these, commits carry the most structured, per-engineer signal — so that's the focus here.
+
+Raw commit count is a bad metric. You can inflate it with trivial `docs()` or `chore()` commits all day. What matters is the *type* of work being done.
+
+PostHog follows [Conventional Commits](https://www.conventionalcommits.org/), which means every commit message is prefixed with a type:
+
+```
+feat: sandbox dev environment v2
+fix: disable egress proxy in LLM gateway client
+test(experiments): add feature flag for DW A/A test
+refactor: use outputs for hog transformations
+docs(internal): document parallel query execution pattern
+chore(code): add worktree config for posthog code
+```
+
+`feat`, `fix`, `test`, and `perf` are what keep the product shipping and stable — they're the primary drivers. `refactor`, `chore`, `docs`, `revert` are supporting work. The scoring weights reflect that.
+
+### Impact Score Formula
+
+```
+raw   = Σ weight(commit_type)
 A static dashboard that ranks the top 5 most impactful engineers at PostHog based on commit activity over the last 90 days.
 
 ---
