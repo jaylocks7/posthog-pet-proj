@@ -206,10 +206,19 @@ const WEIGHTS = {
 };
 
 function fmt(iso) {
-  return new Date(iso).toLocaleDateString('en-US', {
+  return new Date(iso).toLocaleString('en-US', {
     month: 'short', day: 'numeric', year: 'numeric',
     hour: '2-digit', minute: '2-digit',
-  });
+    timeZone: 'America/Los_Angeles',
+  }) + ' PST';
+}
+
+function dateRange(generatedAt, windowDays) {
+  const end = new Date(generatedAt);
+  const start = new Date(end);
+  start.setDate(start.getDate() - windowDays);
+  const fmt2 = d => d.toLocaleDateString('en-US', { month: '2-digit', day: '2-digit', year: 'numeric', timeZone: 'America/Los_Angeles' });
+  return `${fmt2(start)}–${fmt2(end)}`;
 }
 
 function methodology() {
@@ -320,7 +329,7 @@ function render(data) {
         </div>
       </div>
       <div class="header-meta">
-        <div class="badge">Last ${data.window_days} days</div>
+        <div class="badge">Last ${data.window_days} days &nbsp;${dateRange(data.generated_at, data.window_days)}</div>
         <div class="updated">Updated ${fmt(data.generated_at)}</div>
       </div>
     </header>
