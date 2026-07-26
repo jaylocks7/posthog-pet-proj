@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-07-25T09:56:34Z",
+  "generated_at": "2026-07-26T10:08:18Z",
   "window_days": 90,
   "engineers": [
     {
@@ -22,14 +22,14 @@
     {
       "login": "pauldambra",
       "avatar_url": "https://avatars.githubusercontent.com/u/984817?v=4",
-      "impact_score": 30.9,
-      "raw_score": 1320.8,
-      "total_commits": 634,
+      "impact_score": 30.8,
+      "raw_score": 1314.8,
+      "total_commits": 631,
       "commits_by_type": {
-        "feat": 209,
-        "fix": 199,
+        "feat": 208,
+        "fix": 198,
         "perf": 34,
-        "chore": 128,
+        "chore": 127,
         "docs": 2,
         "ci": 1,
         "test": 10,
@@ -41,13 +41,13 @@
     {
       "login": "sampennington",
       "avatar_url": "https://avatars.githubusercontent.com/u/56024559?v=4",
-      "impact_score": 18.8,
-      "raw_score": 802.5,
-      "total_commits": 368,
+      "impact_score": 18.7,
+      "raw_score": 796.5,
+      "total_commits": 365,
       "commits_by_type": {
-        "feat": 136,
-        "fix": 128,
-        "chore": 71,
+        "feat": 135,
+        "fix": 127,
+        "chore": 70,
         "refactor": 22,
         "perf": 5,
         "docs": 2,
@@ -58,12 +58,12 @@
     {
       "login": "andrewm4894",
       "avatar_url": "https://avatars.githubusercontent.com/u/2178292?v=4",
-      "impact_score": 17.9,
-      "raw_score": 763.0,
-      "total_commits": 315,
+      "impact_score": 18.2,
+      "raw_score": 775.0,
+      "total_commits": 319,
       "commits_by_type": {
+        "feat": 199,
         "fix": 58,
-        "feat": 195,
         "chore": 56,
         "refactor": 4,
         "revert": 2
@@ -73,12 +73,12 @@
     {
       "login": "jonmcwest",
       "avatar_url": "https://avatars.githubusercontent.com/u/66999846?v=4",
-      "impact_score": 12.7,
-      "raw_score": 543.5,
-      "total_commits": 198,
+      "impact_score": 12.6,
+      "raw_score": 536.0,
+      "total_commits": 195,
       "commits_by_type": {
         "feat": 142,
-        "fix": 43,
+        "fix": 40,
         "refactor": 4,
         "chore": 7,
         "docs": 1,
