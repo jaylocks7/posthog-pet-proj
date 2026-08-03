@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-08-02T10:04:42Z",
+  "generated_at": "2026-08-03T11:35:40Z",
   "window_days": 90,
   "engineers": [
     {
@@ -23,14 +23,14 @@
     {
       "login": "pauldambra",
       "avatar_url": "https://avatars.githubusercontent.com/u/984817?v=4",
-      "impact_score": 25.1,
-      "raw_score": 1205.8,
-      "total_commits": 570,
+      "impact_score": 24.5,
+      "raw_score": 1179.8,
+      "total_commits": 558,
       "commits_by_type": {
         "fix": 186,
-        "feat": 194,
-        "perf": 21,
-        "chore": 107,
+        "feat": 189,
+        "perf": 16,
+        "chore": 105,
         "docs": 2,
         "ci": 1,
         "test": 10,
@@ -42,13 +42,13 @@
     {
       "login": "andrewm4894",
       "avatar_url": "https://avatars.githubusercontent.com/u/2178292?v=4",
-      "impact_score": 16.9,
-      "raw_score": 811.5,
-      "total_commits": 333,
+      "impact_score": 16.7,
+      "raw_score": 802.0,
+      "total_commits": 329,
       "commits_by_type": {
-        "feat": 206,
+        "feat": 203,
         "fix": 64,
-        "chore": 57,
+        "chore": 56,
         "refactor": 4,
         "revert": 2
       },
@@ -57,16 +57,16 @@
     {
       "login": "sampennington",
       "avatar_url": "https://avatars.githubusercontent.com/u/56024559?v=4",
-      "impact_score": 15.5,
-      "raw_score": 747.5,
-      "total_commits": 335,
+      "impact_score": 15.2,
+      "raw_score": 733.5,
+      "total_commits": 327,
       "commits_by_type": {
-        "feat": 124,
+        "feat": 120,
         "fix": 129,
-        "chore": 59,
+        "chore": 56,
         "refactor": 19,
         "perf": 1,
-        "docs": 2,
+        "docs": 1,
         "test": 1
       },
       "rank": 4
@@ -74,11 +74,11 @@
     {
       "login": "jonmcwest",
       "avatar_url": "https://avatars.githubusercontent.com/u/66999846?v=4",
-      "impact_score": 10.0,
-      "raw_score": 480.5,
-      "total_commits": 175,
+      "impact_score": 9.9,
+      "raw_score": 477.5,
+      "total_commits": 174,
       "commits_by_type": {
-        "feat": 130,
+        "feat": 129,
         "fix": 33,
         "refactor": 4,
         "chore": 7,
