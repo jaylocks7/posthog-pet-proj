@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-08-15T08:38:34Z",
+  "generated_at": "2026-08-16T08:38:57Z",
   "window_days": 90,
   "engineers": [
     {
@@ -23,19 +23,19 @@
     {
       "login": "pauldambra",
       "avatar_url": "https://avatars.githubusercontent.com/u/984817?v=4",
-      "impact_score": 18.9,
-      "raw_score": 1088.8,
-      "total_commits": 520,
+      "impact_score": 18.4,
+      "raw_score": 1059.8,
+      "total_commits": 506,
       "commits_by_type": {
-        "fix": 181,
+        "fix": 175,
         "test": 10,
-        "chore": 99,
-        "feat": 166,
+        "chore": 96,
+        "feat": 162,
         "perf": 13,
         "docs": 2,
         "ci": 1,
         "refactor": 45,
-        "revert": 3
+        "revert": 2
       },
       "rank": 2
     },
