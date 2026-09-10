@@ -1,17 +1,17 @@
 {
-  "generated_at": "2026-09-09T12:55:02Z",
+  "generated_at": "2026-09-10T12:52:28Z",
   "window_days": 90,
   "engineers": [
     {
       "login": "Gilbert09",
       "avatar_url": "https://avatars.githubusercontent.com/u/1459269?v=4",
       "impact_score": 100.0,
-      "raw_score": 6649.6,
-      "total_commits": 2498,
+      "raw_score": 6576.1,
+      "total_commits": 2471,
       "commits_by_type": {
-        "fix": 1408,
-        "feat": 1030,
-        "chore": 42,
+        "feat": 1014,
+        "fix": 1398,
+        "chore": 41,
         "perf": 3,
         "docs": 3,
         "ci": 2,
@@ -24,18 +24,18 @@
     {
       "login": "pauldambra",
       "avatar_url": "https://avatars.githubusercontent.com/u/984817?v=4",
-      "impact_score": 13.6,
-      "raw_score": 906.8,
-      "total_commits": 448,
+      "impact_score": 13.7,
+      "raw_score": 901.3,
+      "total_commits": 451,
       "commits_by_type": {
-        "feat": 123,
-        "perf": 18,
-        "fix": 166,
-        "chore": 116,
+        "fix": 163,
+        "chore": 120,
+        "perf": 22,
+        "feat": 120,
+        "refactor": 8,
         "test": 13,
         "docs": 3,
         "ci": 1,
-        "refactor": 7,
         "revert": 1
       },
       "rank": 2
@@ -43,13 +43,13 @@
     {
       "login": "andrewm4894",
       "avatar_url": "https://avatars.githubusercontent.com/u/2178292?v=4",
-      "impact_score": 13.1,
-      "raw_score": 872.0,
-      "total_commits": 343,
+      "impact_score": 13.4,
+      "raw_score": 878.5,
+      "total_commits": 345,
       "commits_by_type": {
-        "feat": 206,
-        "fix": 92,
+        "feat": 209,
         "chore": 41,
+        "fix": 91,
         "refactor": 3,
         "revert": 1
       },
@@ -59,11 +59,11 @@
       "login": "tatoalo",
       "avatar_url": "https://avatars.githubusercontent.com/u/2117114?v=4",
       "impact_score": 10.3,
-      "raw_score": 686.5,
-      "total_commits": 274,
+      "raw_score": 676.0,
+      "total_commits": 270,
       "commits_by_type": {
-        "fix": 180,
-        "feat": 75,
+        "fix": 177,
+        "feat": 74,
         "chore": 17,
         "perf": 1,
         "refactor": 1
@@ -73,14 +73,14 @@
     {
       "login": "sampennington",
       "avatar_url": "https://avatars.githubusercontent.com/u/56024559?v=4",
-      "impact_score": 9.6,
-      "raw_score": 636.0,
-      "total_commits": 272,
+      "impact_score": 9.7,
+      "raw_score": 635.0,
+      "total_commits": 267,
       "commits_by_type": {
-        "chore": 46,
-        "fix": 106,
-        "feat": 114,
-        "refactor": 6
+        "feat": 118,
+        "fix": 102,
+        "chore": 42,
+        "refactor": 5
       },
       "rank": 5
     }
