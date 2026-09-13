@@ -1,17 +1,17 @@
 {
-  "generated_at": "2026-09-12T12:07:14Z",
+  "generated_at": "2026-09-13T13:16:20Z",
   "window_days": 90,
   "engineers": [
     {
       "login": "Gilbert09",
       "avatar_url": "https://avatars.githubusercontent.com/u/1459269?v=4",
       "impact_score": 100.0,
-      "raw_score": 6635.1,
-      "total_commits": 2495,
+      "raw_score": 6619.1,
+      "total_commits": 2489,
       "commits_by_type": {
-        "fix": 1419,
+        "fix": 1415,
         "chore": 42,
-        "feat": 1016,
+        "feat": 1014,
         "perf": 3,
         "docs": 3,
         "ci": 2,
@@ -24,16 +24,16 @@
     {
       "login": "pauldambra",
       "avatar_url": "https://avatars.githubusercontent.com/u/984817?v=4",
-      "impact_score": 13.6,
-      "raw_score": 902.8,
-      "total_commits": 458,
+      "impact_score": 13.3,
+      "raw_score": 879.8,
+      "total_commits": 453,
       "commits_by_type": {
-        "fix": 164,
-        "chore": 125,
-        "refactor": 9,
+        "fix": 161,
+        "chore": 128,
+        "refactor": 10,
         "perf": 24,
         "docs": 4,
-        "feat": 117,
+        "feat": 111,
         "test": 13,
         "ci": 1,
         "revert": 1
@@ -43,13 +43,13 @@
     {
       "login": "andrewm4894",
       "avatar_url": "https://avatars.githubusercontent.com/u/2178292?v=4",
-      "impact_score": 13.5,
-      "raw_score": 894.0,
-      "total_commits": 351,
+      "impact_score": 13.2,
+      "raw_score": 871.5,
+      "total_commits": 341,
       "commits_by_type": {
-        "chore": 42,
-        "feat": 214,
-        "fix": 91,
+        "chore": 40,
+        "feat": 211,
+        "fix": 86,
         "refactor": 3,
         "revert": 1
       },
@@ -58,7 +58,7 @@
     {
       "login": "tatoalo",
       "avatar_url": "https://avatars.githubusercontent.com/u/2117114?v=4",
-      "impact_score": 10.3,
+      "impact_score": 10.4,
       "raw_score": 686.0,
       "total_commits": 274,
       "commits_by_type": {
@@ -73,13 +73,13 @@
     {
       "login": "sampennington",
       "avatar_url": "https://avatars.githubusercontent.com/u/56024559?v=4",
-      "impact_score": 9.7,
-      "raw_score": 641.0,
-      "total_commits": 269,
+      "impact_score": 9.6,
+      "raw_score": 634.5,
+      "total_commits": 266,
       "commits_by_type": {
-        "feat": 120,
+        "feat": 118,
         "fix": 102,
-        "chore": 42,
+        "chore": 41,
         "refactor": 5
       },
       "rank": 5
