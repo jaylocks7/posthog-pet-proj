@@ -1,16 +1,16 @@
 {
-  "generated_at": "2026-11-14T14:57:50Z",
+  "generated_at": "2026-11-15T15:35:06Z",
   "window_days": 90,
   "engineers": [
     {
       "login": "Gilbert09",
       "avatar_url": "https://avatars.githubusercontent.com/u/1459269?v=4",
       "impact_score": 100.0,
-      "raw_score": 8082.9,
-      "total_commits": 3034,
+      "raw_score": 8022.4,
+      "total_commits": 3010,
       "commits_by_type": {
-        "feat": 1584,
-        "fix": 1278,
+        "feat": 1583,
+        "fix": 1255,
         "refactor": 26,
         "chore": 116,
         "perf": 25,
@@ -23,10 +23,10 @@
       "login": "webjunkie",
       "avatar_url": "https://avatars.githubusercontent.com/u/59713?v=4",
       "impact_score": 16.4,
-      "raw_score": 1323.0,
-      "total_commits": 666,
+      "raw_score": 1318.0,
+      "total_commits": 664,
       "commits_by_type": {
-        "fix": 206,
+        "fix": 204,
         "chore": 212,
         "feat": 223,
         "refactor": 15,
@@ -37,42 +37,42 @@
       "rank": 2
     },
     {
-      "login": "puemos",
-      "avatar_url": "https://avatars.githubusercontent.com/u/13174025?v=4",
-      "impact_score": 15.9,
-      "raw_score": 1288.0,
-      "total_commits": 485,
-      "commits_by_type": {
-        "fix": 184,
-        "feat": 264,
-        "perf": 10,
-        "chore": 22,
-        "refactor": 5
-      },
-      "rank": 3
-    },
-    {
       "login": "pauldambra",
       "avatar_url": "https://avatars.githubusercontent.com/u/984817?v=4",
-      "impact_score": 15.9,
-      "raw_score": 1287.0,
-      "total_commits": 707,
+      "impact_score": 16.0,
+      "raw_score": 1286.5,
+      "total_commits": 706,
       "commits_by_type": {
-        "chore": 228,
-        "perf": 89,
         "fix": 217,
+        "chore": 227,
+        "perf": 89,
         "feat": 139,
         "refactor": 25,
         "revert": 1,
         "test": 6,
         "docs": 2
       },
+      "rank": 3
+    },
+    {
+      "login": "puemos",
+      "avatar_url": "https://avatars.githubusercontent.com/u/13174025?v=4",
+      "impact_score": 15.9,
+      "raw_score": 1277.0,
+      "total_commits": 481,
+      "commits_by_type": {
+        "fix": 182,
+        "feat": 262,
+        "perf": 10,
+        "chore": 22,
+        "refactor": 5
+      },
       "rank": 4
     },
     {
       "login": "jzhu13",
       "avatar_url": "https://avatars.githubusercontent.com/u/14828329?v=4",
-      "impact_score": 11.4,
+      "impact_score": 11.5,
       "raw_score": 925.0,
       "total_commits": 341,
       "commits_by_type": {
