@@ -50,6 +50,9 @@ COMMIT_WEIGHTS = {
 
 DEFAULT_WEIGHT = 0.25
 
+MAX_RATE_LIMIT_RETRIES = 5
+PAGE_FETCH_DELAY_SECONDS = 0.5
+
 BOT_LOGINS = {"web-flow", "ghost", "posthog-bot", "posthog-ci-bot"}
 BOT_PATTERNS = ("[bot]", "-bot", "dependabot", "renovate")
 
@@ -101,21 +104,68 @@ def _parse_next_link(link_header: str):
     return match.group(1) if match else None
 
 
+def _is_rate_limit_response(resp: requests.Response) -> bool:
+    """Distinguish an actual rate limit (retryable) from an auth/permission 403."""
+    if resp.status_code == 429:
+        return True
+    if resp.status_code == 403:
+        if resp.headers.get("X-RateLimit-Remaining") == "0":
+            return True
+        if "rate limit" in resp.text.lower():
+            return True
+    return False
+
+
 def paginate(session: requests.Session, url: str, params=None) -> list:
     """Fetch all pages from a GitHub endpoint with disk caching."""
     cache_file = _cache_key(url, params)
+    partial_cache_file = cache_file.with_suffix(".partial.json")
 
     if not NO_CACHE and cache_file.exists():
         print(f"  [cache] {url}")
         return json.loads(cache_file.read_text())
 
-    print(f"  [fetch] {url}")
     results = []
     current_url = url
     current_params = params
 
+    if not NO_CACHE and partial_cache_file.exists():
+        partial = json.loads(partial_cache_file.read_text())
+        results = partial["results"]
+        current_url = partial["next_url"]
+        current_params = partial["next_params"]
+        print(f"  [resume] {url} ({len(results)} items already fetched)")
+    else:
+        print(f"  [fetch] {url}")
+
+    rate_limit_retries = 0
+
     while current_url:
         resp = session.get(current_url, params=current_params, timeout=30)
+
+        if _is_rate_limit_response(resp):
+            rate_limit_retries += 1
+            if rate_limit_retries > MAX_RATE_LIMIT_RETRIES:
+                CACHE_DIR.mkdir(exist_ok=True)
+                partial_cache_file.write_text(json.dumps({
+                    "results": results,
+                    "next_url": current_url,
+                    "next_params": current_params,
+                }))
+                print(f"  [partial cache] saved {len(results)} items to {partial_cache_file}")
+                resp.raise_for_status()
+
+            retry_after = resp.headers.get("Retry-After")
+            if retry_after:
+                wait = int(retry_after) + 2
+            else:
+                reset_ts = int(resp.headers.get("X-RateLimit-Reset", time.time() + 60))
+                wait = max(0, reset_ts - int(time.time())) + 2
+            print(f"  [rate limit] {resp.status_code}, sleeping {wait}s (retry {rate_limit_retries}/{MAX_RATE_LIMIT_RETRIES})")
+            time.sleep(wait)
+            continue
+
+        rate_limit_retries = 0
         resp.raise_for_status()
 
         remaining = int(resp.headers.get("X-RateLimit-Remaining", 999))
@@ -136,8 +186,12 @@ def paginate(session: requests.Session, url: str, params=None) -> list:
         current_url = _parse_next_link(resp.headers.get("Link", ""))
         current_params = None
 
+        if current_url:
+            time.sleep(PAGE_FETCH_DELAY_SECONDS)
+
     CACHE_DIR.mkdir(exist_ok=True)
     cache_file.write_text(json.dumps(results))
+    partial_cache_file.unlink(missing_ok=True)
     return results
 
 
